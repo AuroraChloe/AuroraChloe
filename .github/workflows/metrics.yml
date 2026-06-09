@@ -28,17 +28,6 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      - name: Recent activity
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/metrics.plugin.activity.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_activity: yes
-          plugin_activity_limit: 6
-          plugin_activity_days: 180
-          plugin_activity_filter: push, issue, ref/create, comment, star, public
-
       - name: Full history calendar
         uses: lowlighter/metrics@latest
         with:
@@ -67,17 +56,6 @@ jobs:
           base: ""
           plugin_people: yes
           plugin_people_types: followers
-
-      - name: GitHub Skyline
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/metrics.plugin.skyline.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_skyline: yes
-          plugin_skyline_year: 2026
-          plugin_skyline_frames: 60
-          plugin_skyline_quality: 0.5
 
       - name: MBTI Personality profile
         uses: lowlighter/metrics@latest
