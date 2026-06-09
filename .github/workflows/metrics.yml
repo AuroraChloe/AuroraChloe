@@ -16,21 +16,76 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          filename: metrics/github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
-
-      - name: Half-year calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_isocalendar: yes
       
       - name: Full-year calendar
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.isocalendar.fullyear.svg
+          filename: metrics/metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+      - name: Recent activity
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.activity.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_activity: yes
+          plugin_activity_limit: 6
+          plugin_activity_days: 0
+          plugin_activity_filter: push, issue, ref/create, comment, star, public
+
+      - name: Full history calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.calendar.full.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+        
+      - name: Notable contributions
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_notable: yes
+          plugin_notable_from: all
+          plugin_notable_types: commit, issue
+          plugin_notable_repositories: yes
+
+      - name: Followers
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.people.followers.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_people: yes
+          plugin_people_types: followers
+
+      - name: GitHub Skyline
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.skyline.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_skyline: yes
+          plugin_skyline_year: 2026
+          plugin_skyline_frames: 120
+          plugin_skyline_quality: 0.5
+
+      - name: MBTI Personality profile
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/metrics.plugin.16personalities.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_16personalities: yes
+          plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
+          plugin_16personalities_sections: personality, profile, traits
+          plugin_16personalities_scores: yes
