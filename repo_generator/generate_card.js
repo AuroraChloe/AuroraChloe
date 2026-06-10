@@ -125,7 +125,7 @@ function renderSvg(data) {
     const shadowFilter = THEME.hasShadow ? 'filter="url(#shadow)"' : '';
 
     // 构建标准的 SVG 文本字符串
-    const svgCode = `<svg width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+    const svgCode = `<svg width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="#e2e8f0" />
