@@ -32,7 +32,7 @@ jobs:
         METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
         # 如果你想生成其他项目的卡片，可以解除下面这一行的注释并自定义
         # TARGET_REPOSITORY: 'AIDC-AI/Pixelle-Video'
-      run: node generate-card.js
+      run: node generate_card.js
 
     # 4. 自动将新生成的 SVG 图片推送（Push）回当前仓库
     - name: Commit and Push Card
