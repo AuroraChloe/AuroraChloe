@@ -1,0 +1,44 @@
+name: Generate Repo Stat Card
+
+on:
+  schedule:
+    # 每天的 0 点和 12 点（UTC时间）自动定时执行更新
+    - cron: '0 */12 * * *'
+  push:
+    # 当你往 main 分支推代码时也自动更新一次
+    branches:
+      - main
+  workflow_dispatch:
+    # 允许你在 GitHub Actions 页面上手动点按钮触发运行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出仓库代码
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # 2. 安装 Node.js
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    # 3. 运行本地脚本渲染生成最新 SVG 卡片
+    - name: Run SVG Generator
+      env:
+        METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        # 如果你想生成其他项目的卡片，可以解除下面这一行的注释并自定义
+        # TARGET_REPOSITORY: 'AIDC-AI/Pixelle-Video'
+      run: node generate-card.js
+
+    # 4. 自动将新生成的 SVG 图片推送（Push）回当前仓库
+    - name: Commit and Push Card
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add repo/github-card.svg
+        # 仅在图片确实有数据变化时才提交，防止死循环
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto update github-card.svg" && git push)
