@@ -15,8 +15,34 @@
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=AuroraChloe.AuroraChloe&left_color=blueviolet&right_color=hotpink&left_text=✨%20Visitors)
 &nbsp;
 [![GitHub followers](https://img.shields.io/github/followers/AuroraChloe?label=Followers&style=flat&color=fc5c7d&labelColor=6a3093&logo=github&logoColor=white)](https://github.com/AuroraChloe)
+&nbsp;
+<a href="https://lumanova.icu">
+  <img src="https://img.shields.io/badge/LumaNova-Personal%20Space-06b6d4?style=flat&logo=googlechrome&logoColor=white&labelColor=a855f7" />
+</a>
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+<br/>
+
+<div align="center">
+  
+<a href="https://lumanova.icu">
+  <img src="repo/lumanova-logo.svg" width="720" alt="LumaNova"/>
+</a>
+
+<br/>
+
+<a href="https://lumanova.icu">
+  <img src="https://img.shields.io/badge/Visit-lumanova.icu-06b6d4?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a1a2e" />
+</a>
+&nbsp;
+<img src="https://img.shields.io/badge/Status-Building%20in%20Public-F472B6?style=for-the-badge&labelColor=1a1a2e" />
+&nbsp;
+<img src="https://img.shields.io/badge/Expect-Bugs%20with%20Personality-a855f7?style=for-the-badge&labelColor=1a1a2e" />
+
+<br/>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
