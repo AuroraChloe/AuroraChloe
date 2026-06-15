@@ -64,9 +64,9 @@
 
 <img src="https://img.shields.io/badge/🚀_AI_Powered-Video_Engine-ee0979?style=for-the-badge&labelColor=1a1a2e" />
 &nbsp;
-<img src="https://img.shields.io/badge/⭐_Stars-21.9k-ff6a00?style=for-the-badge&labelColor=1a1a2e" />
+<img src="https://img.shields.io/badge/⭐_Stars-22.6k-ff6a00?style=for-the-badge&labelColor=1a1a2e" />
 &nbsp;
-<img src="https://img.shields.io/badge/🍴_Forks-3.1k-a855f7?style=for-the-badge&labelColor=1a1a2e" />
+<img src="https://img.shields.io/badge/🍴_Forks-3.2k-a855f7?style=for-the-badge&labelColor=1a1a2e" />
 
 <br/>
 
